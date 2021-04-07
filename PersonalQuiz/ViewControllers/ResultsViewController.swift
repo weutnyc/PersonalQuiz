@@ -72,6 +72,5 @@ class ResultsViewController: UIViewController {
             }
         }
         
-        
     }
 }
