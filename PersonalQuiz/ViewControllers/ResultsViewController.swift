@@ -13,9 +13,10 @@ class ResultsViewController: UIViewController {
     @IBOutlet var descriptionLable: UILabel!
     
     var answers: [Answer]!
-    var dictionary: [AnimalType: Int] = [:]
-    var values: [Int] = []
-    var maxValue = 0
+    
+    private var dictionary: [AnimalType: Int] = [:]
+    private var values: [Int] = []
+    private var maxValue = 0
     
     // 1. Передать сюда массив с ответами
     // 2. Определить наиболее часто встречающийся тип животного
@@ -26,11 +27,9 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         result()
-        
     }
     
-    
-    func result() {
+    private func result() {
         
         for item in answers {
             switch item.type {
